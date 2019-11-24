@@ -1,0 +1,10 @@
+.Logo-Img {
+    max-width: 100px;
+    height: auto;
+    transition: opacity .15s linear;
+
+    &:hover,
+    &:focus {
+        opacity: .7;
+    }
+}

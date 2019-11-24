@@ -1,0 +1,22 @@
+$base-color: #f7f728;
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.App {
+    display: flex;
+    flex-direction: column;
+    height:100vh;
+    background: #171717;
+    //background: #292c33;
+    color: #fff;
+}
+
+.Container {
+    max-width: 1170px;
+    padding: 30px 15px;
+    margin: auto;
+}

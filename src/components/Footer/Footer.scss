@@ -1,0 +1,14 @@
+.Footer {
+    flex-shrink: 0;
+    border-top: 2px solid #5c5c5c;
+    color: #9b9b9b;
+
+    .Container {
+        max-width: 1170px;
+        margin: auto;
+        padding: 30px 15px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}

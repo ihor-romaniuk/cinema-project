@@ -1,0 +1,12 @@
+.Header {
+    flex-shrink: 0;
+    border-bottom: 1px solid rgba(#5c5c5c, .5);
+
+    .Container {
+        max-width: 1170px;
+        padding: 7px 15px;
+        margin: auto;
+        display: flex;
+        align-items: center;
+    }
+}

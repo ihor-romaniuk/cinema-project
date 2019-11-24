@@ -1,0 +1,28 @@
+.Nav {
+    margin-left: 5%;
+}
+
+.Nav-List {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
+.Nav-Item {
+    &:not(:last-child) {
+        margin-right: 10px;
+    }
+}
+
+.Nav-Link {
+    text-decoration: none;
+    color: #fff;
+    transition: color .15s linear;
+
+    &:hover,
+    &:focus {
+        color: #f7f728;
+    }
+}
