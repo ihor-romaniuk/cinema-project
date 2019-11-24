@@ -1,8 +1,8 @@
 import React from "react";
 
 import { Header } from "../Header/Header";
-import { Main } from "../Main/Main";
-import { Footer } from "../../components/Footer/Footer";
+import { Footer } from "../Footer/Footer";
+import { MainContainer } from "../../routes";
 
 import "./App.scss";
 
@@ -10,7 +10,7 @@ function App() {
   return (
     <div className="App">
       <Header/>
-      <Main/>
+      <MainContainer/>
       <Footer/>
     </div>
   );

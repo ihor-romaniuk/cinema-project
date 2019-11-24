@@ -1,4 +1,4 @@
-$base-color: #f7f728;
+$base-color: #f26739;
 
 html,
 body {
@@ -9,10 +9,9 @@ body {
 .App {
     display: flex;
     flex-direction: column;
-    height:100vh;
+    min-height:100vh;
     background: #171717;
-    //background: #292c33;
-    color: #fff;
+    color: #fafafa;
 }
 
 .Container {

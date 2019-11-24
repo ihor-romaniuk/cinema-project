@@ -1,0 +1,46 @@
+.Movie-Card {
+    width: 215px;
+    margin-bottom: 25px;
+    color: #fafafa;
+    text-decoration: none;
+    border: 2px solid transparent;
+    transition: border-color .15s linear;
+
+    &:hover {
+        border-color: #f26739;
+
+        .Movie-Title {
+            opacity: 0;
+        }
+    }
+}
+
+.Movie-Title {
+    color: #fafafa;
+    text-decoration: none;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    padding: 20px 10px;
+    box-sizing: border-box;
+    background: #f26739;
+    transition: opacity .15s linear;
+}
+
+.Movie-PosterWrapper {
+    height: 320px;
+    width: 215px;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+
+.Movie-Poster {
+    max-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+}

@@ -1,8 +1,6 @@
 import React from  "react";
 
-import { Logo } from "../../components/Logo/Logo";
-import { Nav } from "../../components/Nav/Nav";
-import { User } from "../../components/User/User";
+import { Logo, Nav, User } from "../index";
 import "./Header.scss";
 
 export const Header = () => {

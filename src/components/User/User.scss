@@ -2,30 +2,30 @@
     margin-left: auto;
     display: flex;
     align-items: center;
-    color: #fff;
+    color: #fafafa;
     text-decoration: none;
     transition: color .15s linear;
     
     &:hover,
     &:focus {
-        color: #f7f728;
+        color: #f26739;
 
         .User-PhotoWrapper {
-            border-color: #f7f728;
+            border-color: #f26739;
         }
     }
 }
 
 .User-PhotoWrapper {
-    width: 30px;
-    height: 30px;
+    width: 40px;
+    height: 40px;
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
     border: 2px solid #999;
     margin: 0 20px 0 0;
-    padding: 5px;
+    padding: 0;
     transition: all .15s linear;
 }
 
