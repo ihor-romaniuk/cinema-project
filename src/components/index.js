@@ -6,3 +6,5 @@ export * from "./Main/Main";
 export * from "./MovieCard/MovieCard";
 export * from "./Nav/Nav";
 export * from "./User/User";
+export * from "./MovieInfoBlock/MovieInfoBlock";
+export * from "./Spinner/Spinner";

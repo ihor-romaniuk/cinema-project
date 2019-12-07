@@ -22,7 +22,8 @@
     transition: color .15s linear;
 
     &:hover,
-    &:focus {
+    &:focus,
+    &.active {
         color: #f26739;
     }
 }
