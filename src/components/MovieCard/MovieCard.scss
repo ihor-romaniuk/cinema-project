@@ -1,10 +1,17 @@
 .Movie-Card {
-    width: 215px;
+    width: 220px;
+    box-sizing: border-box;
     margin-bottom: 25px;
     color: #fafafa;
     text-decoration: none;
-    border: 2px solid transparent;
+    border: 2px solid rgba(#fafafa, .3);
     transition: border-color .15s linear;
+    margin-right: 17px;
+
+    &:nth-child(5n + 5) {
+
+        margin-right: 0;
+    }
 
     &:hover {
         border-color: #f26739;
@@ -31,7 +38,7 @@
 
 .Movie-PosterWrapper {
     height: 320px;
-    width: 215px;
+    width: 100%;
     overflow: hidden;
     margin: 0;
     padding: 0;
