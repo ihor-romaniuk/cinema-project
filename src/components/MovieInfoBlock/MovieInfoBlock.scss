@@ -1,4 +1,5 @@
 .MovieItem-Row {
+    display: flex;
     margin-bottom: 15px;
 }
 
@@ -6,9 +7,10 @@
     display: inline-block;
     margin-right: 10px;
     color: #8f95a3;
-    min-width: 100px;
+    min-width: 120px;
 }
 
 .MovieInfo-Value {
-    color: #fafafa  ;
+    color: #fafafa;
+    width: 100%;
 }

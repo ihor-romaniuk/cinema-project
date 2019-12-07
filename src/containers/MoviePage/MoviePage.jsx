@@ -17,16 +17,24 @@ class MoviePage extends React.Component {
         this.setState({ movie });
     }
 
+    getInfoByArr = (arr) => {
+        if (arr[arr.length - 1]) {
+            return arr.join(", ");
+        } else {
+            return arr.join(", ").slice(0, 2);
+        }
+    };
+
     render() {
         const { movie } = this.state;
-        const actors =  movie.actors ? movie.actors.filter(item => item != "").join(", ") : "";
-        const genres =  movie.genre ? movie.genre.filter(item => item != "").join(", ") : "";
-        const countries =  movie.country ? movie.country.filter(item => item != "").join(", ") : "";
+        const actors =  movie.actors ? this.getInfoByArr(movie.actors) : "";
+        const genres =  movie.genre ? this.getInfoByArr(movie.genre) : "";
+        const countries =  movie.country ? this.getInfoByArr(movie.country) : "";
 
         return (
             <div className="MovieItem">
                 <div className="Movie-Col_left">
-                    <figure className="Movie-PosterWrapper">
+                    <figure className="Movie-PosterWrapper Movie-PosterWrapper_inner">
                         <img
                             src={movie.poster}
                             className="Movie-Poster"
@@ -46,17 +54,16 @@ class MoviePage extends React.Component {
                     <MovieInfoBlock title="Жанр" text={genres}/>
                     <MovieInfoBlock title="Язык озвучки" text={movie.language}/>
                     <MovieInfoBlock title="Длительность" text={movie.long}/>
-
-                    {
-                        movie.trailer && <iframe
+                    <MovieInfoBlock title="Трейлер" text={
+                        <iframe
                             className="MovieItem-Trailer"
-                            frameborder="0"
+                            frameBorder="0"
                             seamless
                             width="420"
                             height="450"
                             src={movie.trailer}>
                         </iframe>
-                    }
+                    }/>
 
                 </div>
             </div>

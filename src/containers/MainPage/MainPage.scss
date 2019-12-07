@@ -1,6 +1,36 @@
 .Movies-List {
     display: flex;
     align-items: flex-start;
-    justify-content: space-between;
+    justify-content: flex-start;
     flex-wrap: wrap;
+}
+
+
+
+.Filter {
+    width: 100%;
+    margin-bottom: 20px;
+    color: #fff;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.Filter-Title {
+    margin: 0 15px 0 0;
+}
+
+.Filter-Input {
+    font-size: 16px;
+    border: 1px solid hsl(0,0%,80%);
+    padding: 9px 10px;
+    border-radius: 4px;
+    
+    &::placeholder {
+        color: #7f7f7f;
+    }
+}
+
+.Filter-Subtitle {
+    margin: 0 10px;
 }
