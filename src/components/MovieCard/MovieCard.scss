@@ -36,18 +36,3 @@
     transition: opacity .15s linear;
 }
 
-.Movie-PosterWrapper {
-    height: 320px;
-    width: 100%;
-    overflow: hidden;
-    margin: 0;
-    padding: 0;
-    position: relative;
-}
-
-.Movie-Poster {
-    max-width: 100%;
-    min-height: 100%;
-    width: auto;
-    height: auto;
-}

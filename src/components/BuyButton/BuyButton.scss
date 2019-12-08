@@ -1,0 +1,32 @@
+.BuyButton {
+    color: #fff;
+    width: 100%;
+    font-size: 16px;
+    line-height: normal;
+    text-align: center;
+    border-radius: 2px;
+    margin: 10px 0 7px 0;
+    display: block;
+    text-transform: uppercase;
+    text-decoration: none;
+    background: #f26739;
+    padding: 11px 5px;
+    box-sizing: border-box;
+    font-weight: 700;
+    transition: all .15s linear;
+    border: none;
+
+    &_right {
+        padding: 10px;
+        float: right;
+        width: auto;
+        font-size: 14px;
+    }
+
+    &:hover,
+    &:focus {
+        cursor: pointer;
+        opacity: .7;
+
+    }
+}
