@@ -3,10 +3,8 @@ import  {  Switch,  Route } from 'react-router-dom';
 import { connect } from "react-redux";
 
 import { Main } from "../components/Main/Main";
-import { MainPageContainer, MoviePageContainer } from "../containers"
+import { MainPageContainer, MoviePageContainer, ScheduleContainer } from "../containers"
 import  { getMovies } from "../actions";
-import { Spinner } from "../components";
-
 
 class MainContent extends React.Component {
     componentDidMount() {
@@ -14,32 +12,22 @@ class MainContent extends React.Component {
     }
 
     render() {
-        const { isLoading } = this.props;
-
         return (
             <Main>
-                {isLoading
-                    ? <Spinner/>
-                    : (
-                        <Switch>
-                            <Route exact path="/" component={MainPageContainer} />
-                            <Route path="/movie/:id" component={MoviePageContainer} />
-                        </Switch>
-                    )
-                }
+                <Switch>
+                    <Route exact path="/" component={MainPageContainer} />
+                    <Route path="/movie/:id" component={MoviePageContainer} />
+                    <Route path="/schedule" component={ScheduleContainer} />
+                </Switch>
             </Main>
         );
     }
 }
 
-const mapStateToProps = (state) => ({
-    isLoading:  state.loading.isLoading
-});
-
 const mapDispatchToProps = {
     getMovies
 };
 
-export const MainContainer = connect(mapStateToProps, mapDispatchToProps)(MainContent);
+export const MainContainer = connect(null, mapDispatchToProps)(MainContent);
 
 
