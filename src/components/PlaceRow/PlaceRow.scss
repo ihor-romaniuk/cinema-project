@@ -56,6 +56,7 @@
     transition: all .1s linear;
 
     &_booked {
+        pointer-events: none;
         opacity: .4;
     }
 
