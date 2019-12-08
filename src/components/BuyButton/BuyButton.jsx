@@ -2,4 +2,12 @@ import React from "react";
 
 import "./BuyButton.scss";
 
-export const BuyButton = ({ additionalClass = ""}) => <button className={`BuyButton ${additionalClass}`}>Заказать билет</button>;
+export const BuyButton = ({ handleClickBuy, additionalClass="", text="Заказать билет", disabled=false }) => (
+    <button
+        className={`BuyButton ${additionalClass}`}
+        onClick={handleClickBuy}
+        disabled={disabled}
+    >
+        {text}
+    </button>
+);

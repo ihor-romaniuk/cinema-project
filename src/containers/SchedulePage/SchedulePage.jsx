@@ -2,7 +2,7 @@ import React from "react";
 import { connect } from "react-redux";
 
 import { getSessions } from "../../actions"
-import { SessionsBlock, Spinner } from "../../components";
+import { SessionsBlock } from "../../components";
 import { dateOptions } from "../../constants";
 import "./SchedulePage.scss";
 
@@ -15,13 +15,11 @@ export class Schedule extends React.Component {
         const { movies, sessions, rooms } = this.props;
         const sessionsArr = movies.length && sessions.length && rooms.length
             ? sessions.map(item => {
-                return item.map(elem => (
-                    {
-                        ...elem,
-                        room: rooms.find(room => room._id === elem.room).name,
-                        movies: movies.find(movie => movie._id === elem.movie)
-                    }
-                ))
+                return item.map(elem => ({
+                    ...elem,
+                    room: rooms.find(room => room._id === elem.room).name,
+                    movies: movies.find(movie => movie._id === elem.movie)
+                }));
             })
             : [];
 
@@ -29,11 +27,6 @@ export class Schedule extends React.Component {
     };
 
     render() {
-        const { isLoading} = this.props;
-
-        if(isLoading) {
-            return <Spinner/>
-        }
         return (
             <div className="Schedule">
                 {
@@ -51,7 +44,6 @@ export class Schedule extends React.Component {
 
 const mapStateToProps = (state) => ({
     sessions: state.data.sessions,
-    isLoading: state.loading.isLoading,
     movies: state.data.movies,
     rooms: state.data.rooms
 });

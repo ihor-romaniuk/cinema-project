@@ -1,4 +1,4 @@
-import {SET_MOVIES, SET_ROOMS, SET_SESSION} from "../constants";
+import { SET_MOVIES, SET_ROOMS, SET_SESSION } from "../constants";
 
 const INITIAL_VALUE = {
     movies: [],
@@ -30,11 +30,8 @@ export const data = (state = INITIAL_VALUE, action) => {
 
         case SET_SESSION:
             const sortedArr = action.payload.sort((a, b) => {
-                if (new Date(a.date) > new Date(b.date) )
-                    return 1;
-
-                if (new Date(a.date) < new Date(b.date) )
-                    return -1;
+                if (new Date(a.date) > new Date(b.date)) return 1;
+                if (new Date(a.date) < new Date(b.date)) return -1;
 
                 return 0;
             });

@@ -1,0 +1,40 @@
+.Places {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.Places-Front {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 30px;
+    position: relative;
+
+    &:after {
+        content: '';
+        display: block;
+        width: 78%;
+        height: 80px;
+        border-radius: 131px;
+        border-top: 8px solid #f26739;
+        box-sizing: border-box;
+        margin: 0 auto;
+        position: absolute;
+        left: 50%;
+        top: 7px;
+        z-index: 1;
+        transform: translateX(-50%);
+    }
+
+    span {
+        padding: 5px 10px;
+        background: #fafafa;
+        position: relative;
+        z-index: 2;
+        text-transform: lowercase;
+        font-weight: 700;
+        font-size: 19px;
+        color: #f26739;
+    }
+}

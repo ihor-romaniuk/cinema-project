@@ -1,0 +1,31 @@
+.Modal-Title {
+    margin-top: 0;
+    text-align: center;
+}
+
+.Modal-ShortInfo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 15px;
+
+    span {
+        &:last-child {
+            &:before {
+                content: '|';
+                margin: 0 10px;
+            }
+        }
+    }
+}
+
+.Modal-ChosenInfo {
+    text-align: center;
+    padding: 20px 0;
+    width: 75%;
+    margin: auto;
+
+    span {
+        margin: 0 5px;
+    }
+}

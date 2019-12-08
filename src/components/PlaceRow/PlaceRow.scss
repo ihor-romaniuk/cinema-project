@@ -1,0 +1,68 @@
+.Places-Row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: 3;
+
+    &:hover {
+        &:after,
+        &:before {
+            background: #afafaf;
+            color: #fafafa;
+        }
+    }
+
+    &:after,
+    &:before {
+        content: attr(data-row);
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        color: #afafaf;
+        font-size: 12px;
+        width: 20px;
+        height: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 2px;
+        transition: all .1s linear;
+        pointer-events: none;
+    }
+
+    &:after {
+        right: -40px;
+    }
+
+    &:before {
+        left: -40px;
+    }
+}
+
+.Places-Item {
+    background-color: #f26739;
+    border: 2px solid #f26739;
+    color: #fafafa;
+    padding: 5px;
+    margin: 2px;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 2px;
+    font-size: 12px;
+    transition: all .1s linear;
+
+    &_booked {
+        opacity: .4;
+    }
+
+    &:not(.Places-Item_booked):hover {
+        color: #f26739;
+        border-color: #f26739;
+        background: #fafafa;
+        cursor: pointer;
+    }
+}
