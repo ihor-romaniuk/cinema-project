@@ -23,8 +23,8 @@ export const ModalContent = ({
                         <div>
                             <h3>{user.name} спасибо за покупку</h3>
                             <p>
-                                ваш билет на <b>ряд: {chosenPlace.row} место: {chosenPlace.place}</b>
-                                были высланы на указанный e-mail <b>{user.email}</b>
+                                ваш билет на <b>ряд: {chosenPlace.row} место: {chosenPlace.place}</b>&nbsp;
+                                и были высланы на указанный e-mail <b>{user.email}</b>
                             </p>
                         </div>
                     )
