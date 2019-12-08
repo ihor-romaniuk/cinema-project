@@ -1,0 +1,41 @@
+.MovieSession {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px;
+    background: rgba(#fafafa, .1);
+
+    .MovieSession + & {
+        margin-top: 20px;
+    }
+}
+
+.MovieSession-Info {
+    margin-left: 30px;
+}
+
+.MovieSession-Title {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.MovieSession-Room {
+    margin-bottom: 5px;
+}
+
+.MovieSession-RoomLabel {
+    padding: 2px 5px;
+    margin-left: 10px;
+    color: #171717;
+
+    &_yellow {
+        background: yellow;
+    }
+
+    &_green {
+        background: green;
+    }
+}
+
+.MovieSession-Description {
+    margin-top: 20px;
+}

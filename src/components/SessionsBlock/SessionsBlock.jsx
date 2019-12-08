@@ -1,13 +1,10 @@
 import React from "react";
 
+import { MovieSession } from "../MovieSession/MovieSession"
 import "./SessionBlock.scss";
 
-export const SessionsBlock = ({ moviesOnDate }) => (
-    <div className="Schedule-List">
-        {moviesOnDate.map(elem => (
-            <div key={elem._id} className="Schedule-Item">
-                <div>Фильмы: {elem._id}</div>
-            </div>
-        ))}
-    </div>
-);
+export const SessionsBlock = ({ moviesOnDate }) => {
+    return moviesOnDate
+        .filter(item => item.movies)
+        .map(elem => <MovieSession key={elem._id} session={elem} />)
+};

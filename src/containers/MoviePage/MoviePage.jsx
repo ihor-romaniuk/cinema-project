@@ -1,7 +1,7 @@
 import React from "react";
 import { connect } from "react-redux";
 
-import { MovieInfoBlock } from "../../components";
+import { MovieInfoBlock, Poster} from "../../components";
 import "./MoviePage.scss";
 
 class MoviePage extends React.Component {
@@ -33,18 +33,8 @@ class MoviePage extends React.Component {
 
         return (
             <div className="MovieItem">
-                <div className="Movie-Col_left">
-                    <figure className="Movie-PosterWrapper Movie-PosterWrapper_inner">
-                        <img
-                            src={movie.poster}
-                            className="Movie-Poster"
-                            alt={movie.title}
-                        />
-                    </figure>
-                    <button className="Movie-BuyBtn">Заказать билет</button>
-                </div>
-
-                <div className="Movie-Col_right">
+                <Poster poster={movie.poster} title={movie.title} />
+                <div className="MovieItem-Info">
                     <h1 className="MovieItem-Title">{movie.title}</h1>
                     <div className="MovieItem-Description">{movie.description}</div>
 

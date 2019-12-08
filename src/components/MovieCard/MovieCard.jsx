@@ -5,8 +5,8 @@ import "./MovieCard.scss";
 
 export const MovieCard = ({ movie }) => (
     <Link to={`movie/${movie._id}`} className="Movie-Card">
-        <figure className="Movie-PosterWrapper">
-            <img src={movie.poster} alt={movie.title} className="Movie-Poster" />
+        <figure className="MoviePoster-Wrapper">
+            <img src={movie.poster} alt={movie.title} className="MoviePoster-Image" />
             <div className="Movie-Title">{movie.title}</div>
         </figure>
     </Link>

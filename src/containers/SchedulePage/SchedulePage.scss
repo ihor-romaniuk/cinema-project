@@ -1,5 +1,13 @@
+.Schedule-Block{
+    .Schedule-Block + & {
+        margin-top: 40px;
+    }
+}
+
 .Schedule-Title {
     padding: 5px;
     border-bottom: 2px solid #ccc;
     color: #ccc;
+    width: calc(100% + 12%);
+    transform: translateX(-11%);
 }

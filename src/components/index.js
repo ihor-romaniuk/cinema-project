@@ -10,3 +10,6 @@ export * from "./MovieInfoBlock/MovieInfoBlock";
 export * from "./Spinner/Spinner";
 export * from "./Filter/Filter";
 export * from "./SessionsBlock/SessionsBlock";
+export * from "./MovieSession/MovieSession";
+export * from "./Poster/Poster";
+export * from "./BuyButton/BuyButton";

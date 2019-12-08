@@ -13,21 +13,23 @@ export class Schedule extends React.Component {
 
     getSessions = () => {
         const { movies, sessions, rooms } = this.props;
-        return movies.length && sessions && rooms
+        const sessionsArr = movies.length && sessions.length && rooms.length
             ? sessions.map(item => {
-                    return item.map(elem => (
-                        {
-                            ...elem,
-                            room: rooms.find(room => room._id === elem.room).name,
-                            movies: movies.find(movie => movie._id === elem.movie)
-                        }
-                    ))
-                })
+                return item.map(elem => (
+                    {
+                        ...elem,
+                        room: rooms.find(room => room._id === elem.room).name,
+                        movies: movies.find(movie => movie._id === elem.movie)
+                    }
+                ))
+            })
             : [];
+
+        return sessionsArr.map(item => item.filter(elem => elem.movie));
     };
 
     render() {
-        const { isLoading } = this.props;
+        const { isLoading} = this.props;
 
         if(isLoading) {
             return <Spinner/>
@@ -36,9 +38,9 @@ export class Schedule extends React.Component {
             <div className="Schedule">
                 {
                     this.getSessions().map((item, i) => (
-                        <div className="Schedule-Block" key={i+item[0].date}>
+                        <div className="Schedule-Block" key={i}>
                             <h3 className="Schedule-Title">{new Date(item[0].date).toLocaleString("ru", dateOptions)}</h3>
-                            <SessionsBlock key={i} moviesOnDate={item}/>
+                            <SessionsBlock moviesOnDate={item}/>
                         </div>
                     ))
                 }
