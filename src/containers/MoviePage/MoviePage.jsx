@@ -56,6 +56,7 @@ class MoviePage extends React.Component {
                     <MovieInfoBlock title="Длительность" text={movie.long}/>
                     <MovieInfoBlock title="Трейлер" text={
                         <iframe
+                            title={movie.title}
                             className="MovieItem-Trailer"
                             frameBorder="0"
                             seamless
