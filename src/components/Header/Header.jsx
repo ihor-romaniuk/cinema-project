@@ -1,6 +1,6 @@
 import React from  "react";
 
-import { Logo, Nav, User } from "../index";
+import { Logo, Nav, User } from "..";
 import "./Header.scss";
 
 export const Header = () => {

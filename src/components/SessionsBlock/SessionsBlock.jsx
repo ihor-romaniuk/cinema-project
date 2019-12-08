@@ -1,6 +1,6 @@
 import React from "react";
 
-import { MovieSession } from "../MovieSession/MovieSession"
+import { MovieSession } from "..";
 import "./SessionBlock.scss";
 
 export const SessionsBlock = ({ moviesOnDate }) => {

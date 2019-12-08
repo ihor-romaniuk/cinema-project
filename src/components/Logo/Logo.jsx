@@ -6,6 +6,6 @@ import logo from "./logo.png";
 
 export const Logo = () => (
     <Link to="/" className="Logo-Link">
-        <img src={logo} alt="cinema logo" className="Logo-Img" />
+        <img src={logo} alt="[R]cinema" className="Logo-Img" />
     </Link>
 );

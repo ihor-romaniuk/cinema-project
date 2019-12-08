@@ -2,10 +2,10 @@ import React, { useState } from "react";
 import { connect } from "react-redux"
 import Select from 'react-select'
 
-import { MovieCard, Spinner } from "../../components";
+import { MovieCard } from "../../components";
 import "./MainPage.scss";
 
-const MainPage = ({ movies, genres, isLoading }) => {
+const MainPage = ({ movies, genres }) => {
     const [filteredMovies, setFilteredMovies] = useState([]);
     const [valueInput, setValueInput] = useState("");
     const [valueSelect, setValueSelect] = useState("");
@@ -16,12 +16,11 @@ const MainPage = ({ movies, genres, isLoading }) => {
             const hasJustSelectFilter = !valueInput && valueSelect;
             const checkSelectFilter = item.genre && item.genre.length && item.genre.some(elem => elem.trim() === valueSelect);
             const checkTitleFilter = item.title.toLowerCase().includes(valueInput.toLowerCase());
+            const isApplyAllFilters = hasAllFilters && checkSelectFilter && checkTitleFilter;
+            const isApplyOnlyTitleFilter = hasJustTitleFilter && checkTitleFilter;
+            const isApplyOnlySelectFilter = hasJustSelectFilter && checkSelectFilter;
 
-            if (hasAllFilters && checkSelectFilter && checkTitleFilter) {
-                acc.push(item);
-            } else if (hasJustTitleFilter && checkTitleFilter) {
-                acc.push(item);
-            } else if (hasJustSelectFilter && checkSelectFilter) {
+            if (isApplyAllFilters || isApplyOnlyTitleFilter || isApplyOnlySelectFilter) {
                 acc.push(item);
             }
 
@@ -39,12 +38,7 @@ const MainPage = ({ movies, genres, isLoading }) => {
 
         setValueSelect(value);
         setFilteredMovies(getFilteredMovies(valueInput, value));
-
     };
-
-    if(isLoading) {
-        return <Spinner/>
-    }
 
     return (
        <React.Fragment>
@@ -80,8 +74,7 @@ const MainPage = ({ movies, genres, isLoading }) => {
 
 const mapStateToProps = (state) => ({
     movies: state.data.movies,
-    genres: state.data.genres,
-    isLoading: state.loading.isLoading
+    genres: state.data.genres
 });
 
 export const MainPageContainer = connect(mapStateToProps)(MainPage);
