@@ -43,7 +43,7 @@ const MainPage = ({ movies, genres }) => {
     return (
        <React.Fragment>
            <div className="Filter">
-               <h2 className="Filter-Title">Фильтрация:</h2>
+               <h3 className="Filter-Title">Фильтрация:</h3>
                <span className="Filter-Subtitle">Имя</span>
                <input
                    type="text"
