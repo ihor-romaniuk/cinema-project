@@ -33,7 +33,7 @@ class MoviePage extends React.Component {
 
         return (
             <div className="MovieItem">
-                <Poster poster={movie.poster} title={movie.title} />
+                <Poster poster={movie.poster} title={movie.title} showBuyBtn={Boolean(false)}/>
                 <div className="MovieItem-Info">
                     <h1 className="MovieItem-Title">{movie.title}</h1>
                     <div className="MovieItem-Description">{movie.description}</div>
