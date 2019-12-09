@@ -8,7 +8,6 @@ export * from "./Nav/Nav";
 export * from "./User/User";
 export * from "./MovieInfoBlock/MovieInfoBlock";
 export * from "./Spinner/Spinner";
-export * from "./Filter/Filter";
 export * from "./SessionsBlock/SessionsBlock";
 export * from "./MovieSession/MovieSession";
 export * from "./Poster/Poster";
